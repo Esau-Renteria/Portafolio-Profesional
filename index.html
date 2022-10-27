@@ -17,15 +17,15 @@
             </div>
             <nav id="nav" >
                 <ul>
-                    <li><a href="#inicio">INICIO</a></li>
-                    <li><a href="#sobremi">SOBRE MI</a></li>
-                    <li><a href="#skills">SKILLS</a></li>
-                    <li><a href="#curriculum">CURRICULUM</a></li>
-                    <li><a href="#portafolio">PORTAFOLIO</a></li>
-                    <li><a href="#contacto">CONTACTO</a></li>
+                    <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
+                    <li><a href="#sobremi" onclick="seleccionar()">SOBRE MI</a></li>
+                    <li><a href="#skills" onclick="seleccionar()">SKILLS</a></li>
+                    <li><a href="#curriculum" onclick="seleccionar()">CURRICULUM</a></li>
+                    <li><a href="#portafolio" onclick="seleccionar()">PORTAFOLIO</a></li>
+                    <li><a href="#contacto" onclick="seleccionar()">CONTACTO</a></li>
                 </ul>
             </nav>
-            <div class="nav-responsive">
+            <div class="nav-responsive" onclick="mostrarOcultarMenu()">
                 <i class="fa-solid fa-bars"></i>
             </div>
         </header>
@@ -137,7 +137,7 @@
                 <div class="skill">
                 <span><i class="fa-brands fa-square-js"></i> Javascript</span>
                 <div class="barra-skill">
-                    <div class="progreso javascript">
+                    <div class="progreso">
                         <span>35%</span>
                     </div>
                 </div>
@@ -146,7 +146,7 @@
             <div class="skill">
                 <span><i class="fa-brands fa-html5"></i> HTML</span>
                 <div class="barra-skill">
-                    <div class="progreso HTML">
+                    <div class="progreso">
                         <span>75%</span>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
             <div class="skill">
                 <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
                 <div class="barra-skill">
-                    <div class="progreso CSS">
+                    <div class="progreso">
                         <span>45%</span>
                     </div>
                 </div>
@@ -173,7 +173,7 @@
             <div class="skill">
                 <span><i class="fa-brands fa-php"></i> PHP</span>
                 <div class="barra-skill">
-                    <div class="progreso PHP">
+                    <div class="progreso">
                         <span>55%</span>
                     </div>
                 </div>
@@ -182,7 +182,7 @@
             <div class="skill">
                 <span><i class="fa-brands fa-laravel"></i> Laravel</span>
                 <div class="barra-skill">
-                    <div class="progreso laravel">
+                    <div class="progreso">
                         <span>35%</span>
                     </div>
                 </div>
@@ -191,7 +191,7 @@
             <div class="skill">
                 <span><i class="fa-brands fa-python"></i> Python</span>
                 <div class="barra-skill">
-                    <div class="progreso python">
+                    <div class="progreso">
                         <span>30%</span>
                     </div>
                 </div>
@@ -200,7 +200,7 @@
             <div class="skill">
                 <span><i class="fa-solid fa-database"></i> SQL</span>
                 <div class="barra-skill">
-                    <div class="progreso sql">
+                    <div class="progreso">
                         <span>55%</span>
                     </div>
                 </div>
@@ -216,7 +216,7 @@
             <div class="skill">
                 <span><i class="fa-brands fa-github-alt"></i> Git&GitHub</span>
                 <div class="barra-skill">
-                    <div class="progreso git-github">
+                    <div class="progreso">
                         <span>45%</span>
                     </div>
                 </div>
@@ -429,5 +429,6 @@
     <a href=""><i class="fa-solid fa-rss"></i></i></a>
 </div>
 </footer>
+<script src="/js/script.js"></script>
 </body>
 </html>
