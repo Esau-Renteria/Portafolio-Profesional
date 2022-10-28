@@ -1,5 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;200;300;400;600;800&display=swap");
 
+
+:root{
+
+    --primary-color:hsl(185, 93%, 27%);
+    --text-color: hsl(0, 0%, 100%);
+    --bg-color-one: hsl(240, 15%, 12%);
+    --bg-color-two: hsl(219, 24%, 16%);
+    --text-color: rgb(0, 0, 0);
+    --bg-color-one: hsl(0, 10%, 80%);
+    --bg-color-two: hsl(220, 5%, 70%);
+
+}
+
 * {
   box-sizing: border-box;
   font-family: "Work Sans";
@@ -13,8 +26,42 @@ html {
 }
 
 /* Menu */
+
+/* DARK MODE */
+
+body.dark{
+  
+
+    --text-color: hsl(0, 0%, 100%);
+    --bg-color-one: hsl(240, 15%, 12%);
+    --bg-color-two: hsl(219, 24%, 16%);
+}
+.switches{
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+}
+
+
+.toggle-theme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+
+.toggle-theme__icon{
+    margin-right: 0.5em;
+    width: 20px;
+}
+
+/* FIN DARK MODE */
+
+
+
 .contenedor-header {
-  background: #1e2326;
+  background: var(--bg-color-one);
   position: fixed;
   width: 100%;
   top: 0;
@@ -34,7 +81,7 @@ html {
 .contenedor-header header .logo a {
   font-family: "Righteous";
   font-size: 36px;
-  color: aqua;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -45,18 +92,18 @@ html {
 
 .contenedor-header header nav ul li a {
   text-align: none;
-  color: aliceblue;
+  color: var(--text-color);
   margin: 0 15px;
   padding: 3px;
   transition: 0.5s;
   text-decoration: none;
 }
 .contenedor-header header nav ul li a:hover {
-  color: aqua;
+  color: var(--primary-color);
 }
 
 .nav-responsive {
-  background-color: aqua;
+  background-color: var(--primary-color);
   color: #ffff;
   padding: 5px 10px;
   border-radius: 5px;
@@ -71,14 +118,14 @@ html {
     url(/assets/images/fondo.jpg);
   background-size: cover;
   height: 100vh;
-  color: #fff;
+  color: var(--text-color);
   display: flex;
   align-items: center;
 }
 
 .inicio .contenido-banner {
   padding: 20px;
-  background-color: #1e2326;
+  background-color: var(--bg-color-one);
   max-width: 350px;
   margin: auto;
   text-align: center;
@@ -87,7 +134,7 @@ html {
 
 .inicio .contenido-banner img {
   margin-top: 40px;
-  border: 10px solid aqua;
+  border: 10px solid var(--primary-color);
   display: block;
   width: 80%;
   margin: auto;
@@ -105,10 +152,10 @@ html {
 }
 
 .inicio .contenido-banner .redes a {
-  color: #fff;
+  color: var(--text-color);
   display: inline-block;
   text-decoration: none;
-  border: 1px solid #fff;
+  border: 1px solid var(--text-color);
   border-radius: 100%;
   width: 42px;
   height: 42px;
@@ -119,15 +166,15 @@ html {
 }
 
 .inicio .contenido-banner .redes a:hover {
-  background-color: aqua;
+  background-color: var(--primary-color);
 }
 /* FIN SECCION INICIO */
 
 /* SECCION SOBRE MI */
 
 .sobremi {
-  background-color: #1e2326;
-  color: #fff;
+  background-color: var(--bg-color-one);
+  color: var(--text-color);
   padding: 50px 20px;
 }
 
@@ -149,7 +196,7 @@ html {
 }
 
 .sobremi .contenido-seccion p span {
-  color: aqua;
+  color: var(--primary-color);
   font-weight: bold;
 }
 
@@ -176,7 +223,7 @@ html {
 
 .sobremi .fila .col ul li strong {
   display: inline-block;
-  color: aqua;
+  color: var(--primary-color);
   padding: 3px;
   font-weight: bold;
   border-radius: 5px;
@@ -190,7 +237,7 @@ html {
 .sobremi .fila .col .contenedor-intereses .interes {
   width: 100px;
   height: 100px;
-  background-color: #252a2e;
+  background-color: var(--bg-color-two);
   border-radius: 10px;
   margin: 0 15px 15px 0;
   display: flex;
@@ -202,7 +249,7 @@ html {
 }
 
 .sobremi .fila .col .contenedor-intereses .interes:hover {
-  background-color: aqua;
+  background-color: var(--primary-color);
 }
 
 .sobremi .fila .col .contenedor-intereses .interes i {
@@ -213,13 +260,13 @@ html {
 .sobremi button {
   cursor: pointer;
   background-color: transparent;
-  border: 2px solid #fff;
+  border: 2px solid var(--text-color);
   width: fit-content;
   display: block;
   margin: 20px auto;
   padding: 10px 22px;
   font-size: 16px;
-  color: #fff;
+  color: var(--text-color);
   position: relative;
   z-index: 10;
 }
@@ -230,7 +277,7 @@ html {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: aqua;
+  background-color: var(--primary-color);
   z-index: -1;
   transition: 1.5s;
 }
@@ -243,8 +290,8 @@ html {
 
 /* SKILLS SECCION */
 .skills {
-  background-color: #252a2e;
-  color: #fff;
+  background-color: var(--bg-color-two);
+  color: var(--text-color);
   padding: 50px 20px;
 }
 
@@ -283,24 +330,25 @@ html {
 .skills .skill .barra-skill {
   height: 8px;
   width: 80%;
-  background-color: #1e2326;
+  background-color: var(--bg-color-one);
   position: relative;
   margin-bottom: 30px;
 }
 
 .skills .skill .progreso {
-  background-color: aqua;
+  background-color: var(--primary-color);
   position: absolute;
   top: 0;
   left: 0;
   height: 8px;
+  color:#fff;
 }
 
 .skills .skill .barra-skill span {
   position: absolute;
   height: 40px;
   width: 40px;
-  background-color: aqua;
+  background-color: var(--primary-color);
   border-radius: 50px;
   line-height: 40px;
   text-align: center;
@@ -432,8 +480,8 @@ html {
 
 /* SECCION CURRICULUM */
 .curriculum {
-  background-color: #1e2326;
-  color: #fff;
+  background-color: var(--bg-color-one);
+  color: var(--text-color);
   padding: 50px 20px;
 }
 
@@ -463,16 +511,16 @@ html {
   margin-bottom: 25px;
 }
 .curriculum .fila .izquierda {
-  border-right: 2px solid #252a2e;
+  border-right: 2px solid var(--bg-color-two);
 }
 .curriculum .fila .derecha {
-  border-left: 2px solid #252a2e;
+  border-left: 2px solid var(--bg-color-two);
 }
 
 .curriculum .fila .item {
   padding: 25px;
   margin-bottom: 30px;
-  background-color: #252a2e;
+  background-color: var(--bg-color-two);
   position: relative;
 }
 
@@ -482,7 +530,7 @@ html {
 }
 
 .curriculum .fila .item .casa {
-  color: aqua;
+  color: var(--primary-color);
   font-size: 22px;
   font-weight: bold;
   display: block;
@@ -490,7 +538,7 @@ html {
 
 .curriculum .fila .item .fecha {
   display: block;
-  color: aqua;
+  color: var(--primary-color);
   margin-bottom: 10px;
 }
 
@@ -499,18 +547,18 @@ html {
 }
 
 .curriculum .fila .izq {
-  border-right: 2px solid aqua;
+  border-right: 2px solid var(--primary-color);
   margin-right: 20px;
 }
 
 .curriculum .fila .der {
-  border-left: 2px solid aqua;
+  border-left: 2px solid var(--primary-color);
   margin-left: 20px;
 }
 
 .curriculum .fila .item .conectori {
   height: 2px;
-  background-color: aqua;
+  background-color: var(--primary-color);
   width: 47px;
   position: absolute;
   top: 50%;
@@ -523,7 +571,7 @@ html {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background-color: aqua;
+  background-color: var(--primary-color);
   float: right;
   position: relative;
   bottom: 4px;
@@ -531,7 +579,7 @@ html {
 
 .curriculum .fila .item .conectord {
   height: 2px;
-  background-color: aqua;
+  background-color: var(--primary-color);
   width: 47px;
   position: absolute;
   top: 50%;
@@ -544,7 +592,7 @@ html {
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  background-color: aqua;
+  background-color: var(--primary-color);
   float: left;
   position: relative;
   bottom: 4px;
@@ -553,7 +601,7 @@ html {
 
 /* SECCION PORTAFOLIO */
 .portafolio {
-  background-color: #252a2e;
+  background-color: var(--bg-color-two);
   color: #fff;
   padding: 50px 20px;
 }
@@ -567,6 +615,7 @@ html {
   font-family: "Righteous";
   text-align: center;
   padding: 20px 0;
+  color:var(--text-color)
 }
 
 .portafolio .galeria {
@@ -594,7 +643,7 @@ html {
   width: 100%;
   height: 100%;
   text-align: center;
-  background: linear-gradient(rgba(28, 182, 152, 0.8), rgba(28, 182, 152, 0.8));
+  background: linear-gradient(var(--primary-color), var(--bg-color-one));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -620,8 +669,8 @@ html {
 /* SECCION FOOTER*/
 
 footer {
-  background-color: #1e2326;
-  color: #fff;
+  background-color: var(--bg-color-one);
+  color: var(--text-color);
   padding: 50px 0 30px 0;
   text-align: center;
   position: relative;
@@ -633,10 +682,10 @@ footer .redes {
 }
 
 footer .redes a {
-  color: #fff;
+  color: var(--text-color);
   display: inline-block;
   text-decoration: none;
-  border: 1px solid #fff;
+  border: 1px solid var(--text-color);
   border-radius: 100%;
   width: 42px;
   height: 42px;
@@ -649,7 +698,7 @@ footer .arriba {
   display: block;
   width: 50px;
   height: 50px;
-  background-color: aqua;
+  background-color: var(--primary-color);
   color: #fff;
   position: absolute;
   left: 50%;
@@ -675,7 +724,7 @@ footer .arriba {
     position: absolute;
     right: 0;
     top: 75px;
-    background-color: #252a2e;
+    background-color: var(--bg-color-two);
     width: 180px;
   }
   nav.responsive ul {

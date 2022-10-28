@@ -8,7 +8,7 @@
     <LINK href="css/styles.css" rel="stylesheet" type="text/css">
     <title>Portafolio</title>
 </head>
-<body>
+<body class="dark">
     <!-- SECCION MENU ENCABEZADO -->
     <div class="contenedor-header">
         <header>
@@ -16,9 +16,25 @@
                 <a href="#">Esau</a>
             </div>
 
-            
+            <div class="switches">
+
+                <div id="toggle-theme" class="toggle-theme">
+                  <img id="toggle-icon" src="assets/icons/moon.svg" alt="icon theme"
+                  class="toggle-theme__icon">
+                  <p id="toggle-text" class="toggle-theme___text">DARK MODE</p>
+                </div>
+              </div>
+
+              <div class="color">
+                <div class="colors__item color__item--blue" ></div>
+                <div class="colors__item color__item--red" ></div>
+                <div class="colors__item color__item--green" ></div>
+                <div class="colors__item color__item--yellow" ></div>
+              </div>
+              
             
             <nav id="nav" >
+                
                 
                 <ul>
                     <li><a href="#inicio" onclick="seleccionar()">INICIO</a></li>
