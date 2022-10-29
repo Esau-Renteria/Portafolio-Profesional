@@ -3,13 +3,12 @@
 
 :root{
 
-    --primary-color:hsl(185, 93%, 27%);
-    --text-color: hsl(0, 0%, 100%);
-    --bg-color-one: hsl(240, 15%, 12%);
-    --bg-color-two: hsl(219, 24%, 16%);
-    --text-color: rgb(0, 0, 0);
-    --bg-color-one: hsl(0, 10%, 80%);
-    --bg-color-two: hsl(220, 5%, 70%);
+    --primary-color:hsl(211, 76%, 61%); 
+    
+    --text-color: hsl(0,0%,31%);
+    --bg-color-one: hsl(0, 0%, 87%);
+    --bg-color-two: hsl(0, 0%, 95%);
+    --transition:color 0.4s, background-color 0.5s, border 0.5s, border-left 0.5s, border-right 0.5s ease-in-out;
 
 }
 
@@ -33,13 +32,14 @@ body.dark{
   
 
     --text-color: hsl(0, 0%, 100%);
-    --bg-color-one: hsl(240, 15%, 12%);
-    --bg-color-two: hsl(219, 24%, 16%);
+    --bg-color-one: hsl(0, 0%, 15%);
+    --bg-color-two: hsl(0, 1%, 21%);
 }
 .switches{
     display: flex;
     align-items: center;
     color: var(--text-color);
+    
 }
 
 
@@ -58,10 +58,42 @@ body.dark{
 
 /* FIN DARK MODE */
 
+/* CAMBIO COLOR PRINCIPAL */
+.color{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20px;
+  width: 100px;
+}
+
+.colors__item{
+  width: 20px;
+  height: 20px;
+  border: 1px solid var(--text-color);
+  cursor: pointer;
+  background-color: var(--primary-color);
+}
+
+.color__item--blue{
+  --primary-color: hsl(211, 76%, 61%); 
+}
+.color__item--red{
+  --primary-color: hsl(0, 76%, 61%);
+}
+.color__item--green{
+  --primary-color: hsl(111, 76%, 61%);
+}
+.color__item--yellow{
+  --primary-color: hsl(40, 76%, 61%);
+}
+/* FIN DE CAMBIO COLOR PRINCIPAL */
+
 
 
 .contenedor-header {
   background: var(--bg-color-one);
+  transition: var(--transition);
   position: fixed;
   width: 100%;
   top: 0;
@@ -82,6 +114,7 @@ body.dark{
   font-family: "Righteous";
   font-size: 36px;
   color: var(--primary-color);
+  transition: var(--transition);
   text-decoration: none;
 }
 
@@ -124,6 +157,7 @@ body.dark{
 }
 
 .inicio .contenido-banner {
+  transition: var(--transition);
   padding: 20px;
   background-color: var(--bg-color-one);
   max-width: 350px;
@@ -134,6 +168,7 @@ body.dark{
 
 .inicio .contenido-banner img {
   margin-top: 40px;
+  transition: var(--transition);
   border: 10px solid var(--primary-color);
   display: block;
   width: 80%;
@@ -173,9 +208,11 @@ body.dark{
 /* SECCION SOBRE MI */
 
 .sobremi {
+  transition: var(--transition);
   background-color: var(--bg-color-one);
   color: var(--text-color);
   padding: 50px 20px;
+  
 }
 
 .sobremi .contenido-seccion {
@@ -260,6 +297,7 @@ body.dark{
 .sobremi button {
   cursor: pointer;
   background-color: transparent;
+  transition: var(--transition);
   border: 2px solid var(--text-color);
   width: fit-content;
   display: block;
@@ -290,6 +328,7 @@ body.dark{
 
 /* SKILLS SECCION */
 .skills {
+  transition: var(--transition);
   background-color: var(--bg-color-two);
   color: var(--text-color);
   padding: 50px 20px;
@@ -330,18 +369,20 @@ body.dark{
 .skills .skill .barra-skill {
   height: 8px;
   width: 80%;
+  transition: var(--transition);
   background-color: var(--bg-color-one);
   position: relative;
   margin-bottom: 30px;
 }
 
 .skills .skill .progreso {
+  transition: var(--transition);
   background-color: var(--primary-color);
   position: absolute;
   top: 0;
   left: 0;
   height: 8px;
-  color:#fff;
+  color:var(--text-color);
 }
 
 .skills .skill .barra-skill span {
@@ -480,6 +521,7 @@ body.dark{
 
 /* SECCION CURRICULUM */
 .curriculum {
+  transition: var(--transition);
   background-color: var(--bg-color-one);
   color: var(--text-color);
   padding: 50px 20px;
@@ -511,15 +553,18 @@ body.dark{
   margin-bottom: 25px;
 }
 .curriculum .fila .izquierda {
+  transition: var(--transition);
   border-right: 2px solid var(--bg-color-two);
 }
 .curriculum .fila .derecha {
+  transition: var(--transition);
   border-left: 2px solid var(--bg-color-two);
 }
 
 .curriculum .fila .item {
   padding: 25px;
   margin-bottom: 30px;
+  transition: var(--transition);
   background-color: var(--bg-color-two);
   position: relative;
 }
@@ -530,6 +575,7 @@ body.dark{
 }
 
 .curriculum .fila .item .casa {
+  transition: var(--transition);
   color: var(--primary-color);
   font-size: 22px;
   font-weight: bold;
@@ -538,6 +584,7 @@ body.dark{
 
 .curriculum .fila .item .fecha {
   display: block;
+  transition: var(--transition);
   color: var(--primary-color);
   margin-bottom: 10px;
 }
@@ -547,17 +594,20 @@ body.dark{
 }
 
 .curriculum .fila .izq {
+  transition: var(--transition);
   border-right: 2px solid var(--primary-color);
   margin-right: 20px;
 }
 
 .curriculum .fila .der {
+  transition: var(--transition);
   border-left: 2px solid var(--primary-color);
   margin-left: 20px;
 }
 
 .curriculum .fila .item .conectori {
   height: 2px;
+  transition: var(--transition);
   background-color: var(--primary-color);
   width: 47px;
   position: absolute;
@@ -571,6 +621,7 @@ body.dark{
   height: 10px;
   width: 10px;
   border-radius: 50%;
+  transition: var(--transition);
   background-color: var(--primary-color);
   float: right;
   position: relative;
@@ -579,6 +630,7 @@ body.dark{
 
 .curriculum .fila .item .conectord {
   height: 2px;
+  transition: var(--transition);
   background-color: var(--primary-color);
   width: 47px;
   position: absolute;
@@ -592,6 +644,7 @@ body.dark{
   height: 10px;
   width: 10px;
   border-radius: 50%;
+  transition: var(--transition);
   background-color: var(--primary-color);
   float: left;
   position: relative;
@@ -601,6 +654,7 @@ body.dark{
 
 /* SECCION PORTAFOLIO */
 .portafolio {
+  transition: var(--transition);
   background-color: var(--bg-color-two);
   color: #fff;
   padding: 50px 20px;
@@ -669,6 +723,7 @@ body.dark{
 /* SECCION FOOTER*/
 
 footer {
+  transition: var(--transition);
   background-color: var(--bg-color-one);
   color: var(--text-color);
   padding: 50px 0 30px 0;
@@ -682,6 +737,7 @@ footer .redes {
 }
 
 footer .redes a {
+  transition: var(--transition);
   color: var(--text-color);
   display: inline-block;
   text-decoration: none;
@@ -698,6 +754,7 @@ footer .arriba {
   display: block;
   width: 50px;
   height: 50px;
+  transition: var(--transition);
   background-color: var(--primary-color);
   color: #fff;
   position: absolute;
