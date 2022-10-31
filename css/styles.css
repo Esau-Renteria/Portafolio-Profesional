@@ -77,15 +77,19 @@ body.dark{
 
 .color__item--blue{
   --primary-color: hsl(211, 76%, 61%); 
+  border-radius: 100%;
 }
 .color__item--red{
   --primary-color: hsl(0, 76%, 61%);
+  border-radius: 100%;
 }
 .color__item--green{
   --primary-color: hsl(111, 76%, 61%);
+  border-radius: 100%;
 }
 .color__item--yellow{
   --primary-color: hsl(40, 76%, 61%);
+  border-radius: 100%;
 }
 /* FIN DE CAMBIO COLOR PRINCIPAL */
 
